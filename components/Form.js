@@ -36,7 +36,7 @@ export default class Form extends React.Component {
     }
 
     async fetchCountriesData() {
-        const json = await fetch('http://localhost:3002/countries');
+        const json = await fetch('http://0.0.0.0:3002/countries');
         const data = await json.json();
         const countriesData = [];
         data.forEach((item) => {
