@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+%label {
+    font-size: 16px;
+    line-height: 24px;
+    color: #9b9b9b;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fafbfc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.app {
+    padding: 110px;
+
+    .heading {
+        font-size: 36px;
+        letter-spacing: 0.25px;
+        color: #454545;
+        text-align: center;
+        margin: 0 0 24px 0;
+        font-weight: normal;
+    }
+
+    .signUpForm {
+        background-color: #fff;
+        margin: 0 auto;
+        width: 427px;
+        padding: 24px 40px 30px 40px;
+        border-radius: 4px;
+        border: solid 1px #ebedf8;
+        
+        .formItem {
+            position: relative;
+            margin-bottom: 30px;
+
+            label {
+                @extend %label;
+            }
+
+            .formItem_label {
+                position: absolute;
+                top: 10px;
+                transition: 0.5s;
+            }
+
+            .small {
+                top: 0;
+                font-size: 12px;
+            }
+
+            input, select {
+                width: 100%;
+                padding: 20px 0 6px;
+                border: none;
+                outline: none;
+                border-bottom: 0.5px solid #9b9b9b;
+                display: block;
+                font-family: 'Open Sans', sans-serif;
+                color: #454545;
+
+                option {
+                    font-size: 18px;
+                    color: #454545;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+
+            input:focus {
+                border-bottom: 0.5px solid #454545;
+            }
+
+            input:focus + .formItem_label {
+                top: 0;
+                font-size: 12px;
+            }
+            
+        }
+
+        .phoneNumber {
+            display: flex;
+
+            .code {
+                width: 96px;
+                margin-right: 20px;                                      
+            }
+
+            .tel {
+                width: 80%;
+
+                input {
+                    padding-bottom: 8px;
+                }
+            }
+        }
+
+        .passwordNotification {
+            font-size: 12px;
+            color: #ed715c;
+            margin: 0;
+            margin-top: 3px;
+        }
+
+        .mailing {
+            display: flex;
+
+            label {
+                width: 90%;
+                color: #9398a2;
+                font-size: 14px;
+                margin-left: 8px;
+                line-height: normal;
+            }
+
+            #mailingStatus {
+                width: 18px;
+                height: 18px;
+                margin: 0;
+                position: relative;
+                z-index: 0;
+            }
+            
+            #mailingStatus:checked::after {
+                background-image: url(../components/images/group.png);
+            }
+
+            #mailingStatus::after {
+                content: "";
+                position: relative;
+                z-index: 1;
+                display: block;
+                width: 18px;
+                height: 18px;
+                border-radius: 2px;
+            }
+        }
+
+        .error {
+            input {
+                border-bottom: 0.5px solid #ed715c;
+            }
+        }
+
+        .match {
+            input {
+                border-bottom: 0.5px solid #46b688;
+            }
+        }
+
+        .registerButton {
+            width: 100%;
+            padding: 12px;
+            color: #fff;
+            text-transform: uppercase;
+            background-color: #46b688;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 0.47px;
+        }
+
+        .registerButton:hover {
+            background-color: #399f81;
+        }
+
+        .registerButton:active {
+            background-color: #288077;
+        }
+
+        .log {
+            text-align: center;
+            font-size: 14px;
+            letter-spacing: 0.2px;
+            color: #9398a2;
+            line-height: normal;
+            width: 105%;
+            margin: 20px 0 0 -2%;
+
+            a {
+                color: #0a7abf;
+                text-decoration: none;
+            }
+        }
+
+        .noCongr {
+            display: none;
+        }
+        
+        .successNotification {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 381px;
+            height: 64px;
+            border-radius: 4px;
+            border: solid 1px rgba(65, 151, 121, 0.3);
+            background-color: #e7f2ee;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                display: flex;  
+
+                img {
+                    width: 13px;
+                    height: 13px;
+                    margin-right: 8px;
+                }
+    
+                p {
+                    color: #419779;
+                    margin: 0;
+                    font-size: 14px;
+                    line-height: normal;
+                    margin-top: -3px;
+    
+                    span {
+                        display: block;
+                        font-weight: bold;
+                    }
+                }
+            }
+            
+            .deleteNotificationButton {
+                width: 16px;
+                height: 16px;
+                background-image: url(../components/images/arrow-dropdown-copy-11.png);
+                background-position: center;
+                border: none;
+                background-color: #e7f2ee;
+                margin-top: -3px;
+                
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+
+

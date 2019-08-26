@@ -1,0 +1,48 @@
+{
+  "presets": [
+    [
+      "es2015",
+      {
+        "modules": false
+      }
+    ],
+    "env",
+    "react",
+    "flow",
+    "react-boilerplate"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "es2015",
+          "env"
+        ],
+        "react",
+        "flow",
+        "react-boilerplate"
+      ]
+    }
+  },
+  "plugins": [
+    "syntax-dynamic-import",
+    ["transform-runtime",
+      {"polyfill": false}
+    ],
+    "transform-regenerator",
+    "transform-async-to-generator",
+    "transform-es5-property-mutators",
+    "syntax-class-properties",
+    "transform-object-rest-spread",
+    "syntax-decorators",
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "transform-es2015-block-scoping",
+    ["transform-es2015-classes",
+      {"loose": true}
+    ],
+    "transform-proto-to-assign",
+    "transform-object-assign",
+    "react-hot-loader/babel"
+  ]
+}
